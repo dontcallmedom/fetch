@@ -18,6 +18,58 @@ Boilerplate: omit feedback-header, omit conformance, omit index, omit idl-index
 <script src=https://resources.whatwg.org/file-issue.js async></script>
 <script id=head src=https://resources.whatwg.org/dfn.js defer></script>
 
+<pre class=biblio>
+{
+    "HTTP": {
+        "aliasOf": "HTTP11"
+    },
+    "REFERRER": {
+        "aliasOf": "referrer-policy"
+    },
+    "SW": {
+        "aliasOf": "service-workers"
+    },
+    "UPGRADE": {
+        "aliasOf": "upgrade-insecure-requests"
+    },
+    "HSTS": {
+        "aliasOf": "rfc6797"
+    },
+    "WSP": {
+        "aliasOf": "WEBSOCKETS-PROTOCOL"
+    },
+    "CLIENT-HINTS": {
+        "authors": [
+            "Ilya Grigorik"
+        ],
+        "href": "https://tools.ietf.org/html/draft-ietf-httpbis-client-hints",
+        "publisher": "IETF",
+        "title": "HTTP Client Hints"
+    },
+    "DATAURL": {
+        "authors": ["Simon Sapin"],
+        "href": "https://simonsapin.github.io/data-urls/",
+        "title": "The data URL scheme"
+    },
+    "HTTPVERBSEC1": {
+        "publisher": "US-CERT",
+        "href": "https://www.kb.cert.org/vuls/id/867593",
+        "title": "Multiple vendors' web servers enable HTTP TRACE method by default."
+    },
+    "HTTPVERBSEC2": {
+        "publisher": "US-CERT",
+        "href": "https://www.kb.cert.org/vuls/id/288308",
+        "title": "Microsoft Internet Information Server (IIS) vulnerable to cross-site scripting via HTTP TRACK method."
+    },
+    "HTTPVERBSEC3": {
+        "publisher": "US-CERT",
+        "href": "https://www.kb.cert.org/vuls/id/150227",
+        "title": "HTTP proxy default configurations allow arbitrary TCP connections."
+    }
+
+}
+</pre>
+
 <h2 id=goals class="no-num short">Goals</h2>
 
 <p>To unify fetching across the web platform this specification supplants a number of algorithms and
@@ -209,7 +261,7 @@ use "<code>deprecated</code>" is not defined by this specification. An
 <p>A <dfn data-export>forbidden method</dfn> is a <a for=https>method</a> that is a
 <a>byte-case-insensitive</a> match for `<code>CONNECT</code>`,
 `<code>TRACE</code>`, or `<code>TRACK</code>`.
-[[HTTPVERBSEC]]
+[[HTTPVERBSEC1]], [[HTTPVERBSEC2]], [[HTTPVERBSEC3]]
 
 <p>To <dfn data-export data-dfn-for=method id=concept-method-normalize for=method>normalize</dfn> a
 <a for=https>method</a>, if it is a <a>byte-case-insensitive</a>

@@ -2056,12 +2056,12 @@ fetch(url).then(response => {
  header. For example, if the response included the following headers
 
  <pre>
-Content-Security-Policy: default-src 'self'
+Content-Security-Policy: default-src \'self\'
 Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
 Access-Control-Expose-Headers: Content-Security-Policy</pre>
 
  <p>then <code>hsts</code> would be null and <code>csp</code> would be
- "<code>default-src 'self'</code>", even though the response did include both headers. This is
+ "<code>default-src \'self\'</code>", even though the response did include both headers. This is
  because <code>bar.invalid</code> needs to explicitly share each header by listing their names in
  the `<a><code>Access-Control-Expose-Headers</code></a>` response
  header.
